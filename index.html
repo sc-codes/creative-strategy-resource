@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Creative Strategy Resource created by Schuanne Cappel — a living operating system for research, customer understanding, strategy, journey mapping, execution, and measurement." />
+  <title>Creative Strategy Resource — Schuanne Cappel</title>
+  <style>
+    :root{
+      --bg:#f7f8fa;--panel:#ffffff;--text:#17202a;--muted:#68707a;--border:#d9dee5;
+      --accent:#126b72;--accent2:#e8f4f3;--accent3:#d6ecea;--danger:#a33b3b;
+      --shadow:0 8px 24px rgba(0,0,0,.07);--radius:16px;
+    }
+    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}
+    a{color:var(--accent)} button,input{font:inherit} button{cursor:pointer}
+    .wrap{max-width:1180px;margin:0 auto;padding:32px 20px 64px}
+    .hero{display:flex;justify-content:space-between;gap:24px;align-items:flex-end;margin-bottom:24px;border-bottom:1px solid var(--border);padding-bottom:18px}
+    .eyebrow{font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);font-weight:700}
+    h1{font-size:clamp(2rem,5vw,4rem);line-height:1.02;margin:.25rem 0 .45rem}.byline{color:var(--muted);font-size:1rem}.version{font-size:.85rem;color:var(--muted);white-space:nowrap}
+    h2{font-size:1.35rem;margin:0 0 12px} h3{font-size:1.05rem;margin:0 0 8px}
+    .callout,.panel,.ref-panel,.stage-card{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:18px}
+    .callout{background:var(--accent2);border-color:var(--accent3)}
+    .workflow{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
+    .stage-btn{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:14px;text-align:left;min-height:120px;color:var(--text)}
+    .stage-btn.active{background:var(--accent);color:white;border-color:var(--accent)}
+    .stage-btn small{display:block;margin-top:7px;color:var(--muted)} .stage-btn.active small{color:#e9ffff}
+    .badge{display:inline-flex;align-items:center;justify-content:center;min-width:28px;height:28px;padding:0 8px;border-radius:999px;background:var(--accent2);color:var(--accent);font-weight:700;font-size:.82rem}
+    .stage-btn.active .badge{background:white;color:var(--accent)}
+    .lenses{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.term{position:relative;border:0;background:transparent;color:var(--accent);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px;padding:0;cursor:help}
+    .term:hover::after,.term:focus::after{content:attr(data-tip);position:absolute;z-index:99;left:0;top:calc(100% + 8px);width:min(320px,80vw);padding:10px 12px;border:1px solid var(--border);border-radius:12px;background:#111827;color:white;text-align:left;font-size:.86rem;font-weight:400;text-decoration:none;box-shadow:var(--shadow)}
+    .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.grid5{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+    .node{border:1px solid var(--border);border-radius:14px;padding:14px;background:var(--panel)} .soft{background:var(--accent2)}
+    .flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:10px;align-items:stretch}.arrow{display:flex;align-items:center;color:var(--muted);font-weight:700}
+    .journey-line{border-left:3px solid var(--accent3);padding-left:18px;margin-left:10px}.journey-item{padding:0 0 18px}.journey-item:last-child{padding-bottom:0}
+    details{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:14px} summary{font-weight:700;cursor:pointer}
+    .reference{display:grid;gap:14px}.stage-card{display:grid;gap:18px}.muted{color:var(--muted)}.small{font-size:.9rem}.tight p{margin:.35rem 0}.metric{border:1px solid var(--border);border-radius:12px;padding:12px;background:#fbfcfd}.metric strong{display:block;margin-top:3px}
+    .glossary-search{width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:12px;background:white}.glossary-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px}
+    footer{margin-top:28px;padding-top:18px;border-top:1px solid var(--border);display:flex;justify-content:space-between;gap:16px;color:var(--muted);font-size:.9rem;flex-wrap:wrap}
+    .notice{font-size:.88rem;color:var(--muted)}
+    @media(max-width:900px){.workflow{grid-template-columns:repeat(2,minmax(0,1fr))}.grid4,.grid5{grid-template-columns:repeat(2,minmax(0,1fr))}.grid3{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.arrow{display:none}.hero{align-items:flex-start;flex-direction:column}.version{white-space:normal}}
+    @media(max-width:640px){.grid2,.grid4,.grid5,.glossary-grid{grid-template-columns:1fr}.workflow{grid-template-columns:1fr}.wrap{padding:22px 14px 48px}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <div>
+        <div class="eyebrow">Living learning resource</div>
+        <h1>Creative Strategy Resource</h1>
+        <div class="byline">Created by <strong>Schuanne Cappel</strong></div>
+      </div>
+      <div class="version">Version 0.3 · August 2026</div>
+    </header>
+
+    <section class="callout">
+      <strong>One workflow. Several cross-cutting lenses. One running acne example.</strong>
+      <p class="small">Use the six numbered stages in order. The lenses beneath them influence decisions across stages but are not additional steps. Hover or focus any underlined glossary term for a definition.</p>
+    </section>
+
+    <section style="margin-top:20px">
+      <h2>The workflow</h2>
+      <div class="workflow" role="group" aria-label="Creative strategy workflow">
+        <button class="stage-btn active" data-stage="research"><span class="badge">1</span><strong style="display:block;margin-top:9px">Research</strong><small>What is true?</small></button>
+        <button class="stage-btn" data-stage="customer"><span class="badge">2</span><strong style="display:block;margin-top:9px">Customer Understanding</strong><small>Who, why, what do they know?</small></button>
+        <button class="stage-btn" data-stage="strategy"><span class="badge">3</span><strong style="display:block;margin-top:9px">Strategy</strong><small>What persuasive truth?</small></button>
+        <button class="stage-btn" data-stage="journey"><span class="badge">4</span><strong style="display:block;margin-top:9px">Journey + Opportunity</strong><small>Which person, which moment?</small></button>
+        <button class="stage-btn" data-stage="execution"><span class="badge">5</span><strong style="display:block;margin-top:9px">Execution</strong><small>How will it land?</small></button>
+        <button class="stage-btn" data-stage="measurement"><span class="badge">6</span><strong style="display:block;margin-top:9px">Measurement + Learning</strong><small>What happened next?</small></button>
+      </div>
+      <p class="notice" style="text-align:center;margin:10px 0 0">↺ Learning feeds back into earlier stages</p>
+    </section>
+
+    <section class="panel" style="margin-top:20px">
+      <div class="lenses">
+        <strong class="small">Cross-cutting lenses:</strong>
+        <button class="term" type="button" data-tip="What this individual already knows about the problem, solution and product. Determined in Customer Understanding; later used to shape message expression.">Awareness stage</button>
+        <button class="term" type="button" data-tip="How many similar promises, mechanisms and claims the market has already encountered.">Market sophistication</button>
+        <button class="term" type="button" data-tip="Where the person sits in your commercial relationship or funnel: top, middle or bottom. Not the same as awareness.">TOF / MOF / BOF</button>
+        <button class="term" type="button" data-tip="The product market or vertical, such as acne skincare, fashion, supplements, home goods or SaaS.">Product category / vertical</button>
+        <button class="term" type="button" data-tip="How expensive, risky or consequential the purchase feels. Higher consideration usually raises the need for proof and risk reduction.">Price / consideration</button>
+        <button class="term" type="button" data-tip="Where the creative appears and how people consume content there: TikTok, Reels, Feed, Stories, YouTube pre-roll, etc.">Platform / placement</button>
+        <button class="term" type="button" data-tip="Who or what supplies credibility or carries the message: customer, creator, founder, expert, employee or product demonstration.">Talent / credibility source</button>
+        <button class="term" type="button" data-tip="The goal exists at several levels: business objective, marketing/campaign objective and creative objective/KPI.">Objective</button>
+      </div>
+      <p class="notice">These are not extra workflow stages. They constrain or modify choices inside the six stages.</p>
+    </section>
+
+    <section id="stageContent" style="margin-top:20px" aria-live="polite"></section>
+
+    <section style="margin-top:28px">
+      <h2>Reference library</h2>
+      <div class="reference">
+        <details open>
+          <summary>Objective hierarchy — what does “objective” mean?</summary>
+          <div class="flow" style="margin-top:14px">
+            <div class="node"><strong>Business objective</strong><p class="small">The commercial outcome the company needs.</p><p class="small"><strong>Acne example:</strong> grow profitable revenue for the new acne line.</p></div>
+            <div class="arrow">→</div>
+            <div class="node"><strong>Marketing / campaign objective</strong><p class="small">What marketing must cause or support.</p><p class="small"><strong>Example:</strong> acquire new customers or build awareness for barrier-first treatment.</p></div>
+            <div class="arrow">→</div>
+            <div class="node"><strong>Creative objective / KPI</strong><p class="small">What this asset must accomplish in the communication chain.</p><p class="small"><strong>Example:</strong> earn the stop, explain the mechanism, increase qualified clicks, or overcome an objection.</p></div>
+          </div>
+          <p class="small"><strong>Rule:</strong> do not optimize a creative metric that is disconnected from the larger commercial objective.</p>
+        </details>
+
+        <details>
+          <summary>Awareness vs sophistication vs funnel position</summary>
+          <div class="grid3" style="margin-top:14px">
+            <div class="node"><strong>Awareness</strong><p class="small">What this person knows.</p><p class="small">Unaware → Problem-Aware → Solution-Aware → Product-Aware → Most-Aware.</p></div>
+            <div class="node"><strong>Market sophistication</strong><p class="small">What the market has already heard.</p><p class="small">A mature acne market may already be saturated with ingredient, dermatologist and “clear skin fast” claims.</p></div>
+            <div class="node"><strong>TOF / MOF / BOF</strong><p class="small">Where someone sits in your commercial funnel or relationship.</p><p class="small">Someone can be TOF yet highly Product-Aware because she researched the brand elsewhere.</p></div>
+          </div>
+        </details>
+
+        <details>
+          <summary>Decision authority — what governs what?</summary>
+          <p class="small">There is no single universal authority hierarchy. Different sources govern different questions.</p>
+          <div class="grid3" style="margin-top:14px">
+            <div class="node"><strong>Product, legal + factual truth</strong><p class="small">Governs what you can truthfully claim. Performance never overrides factual accuracy.</p></div>
+            <div class="node"><strong>Customer evidence</strong><p class="small">Governs what pains, desires, language, beliefs and situations appear relevant to real customers.</p></div>
+            <div class="node"><strong>Business + brand strategy</strong><p class="small">Governs positioning, priorities, economics and which opportunities are strategically worth pursuing.</p></div>
+            <div class="node"><strong>Official platform guidance</strong><p class="small">Governs specs, placement constraints and platform metric definitions.</p></div>
+            <div class="node"><strong>Practitioner frameworks</strong><p class="small">Supply useful models, heuristics and hypotheses. They are tools, not universal laws.</p></div>
+            <div class="node"><strong>Your measured results</strong><p class="small">Govern account-specific optimization: what deserves expansion, iteration or retirement.</p></div>
+          </div>
+        </details>
+
+        <details>
+          <summary>Platform execution terms</summary>
+          <div class="grid4" style="margin-top:14px">
+            <div class="node"><strong>Placement behavior</strong><p class="small">How people consume content in that placement: scrolling, tapping, sound behavior, skip behavior and surrounding UI.</p></div>
+            <div class="node"><strong>Creative specs</strong><p class="small">Technical rules: aspect ratio, dimensions, duration, file type, audio support and related requirements.</p></div>
+            <div class="node"><strong>Safe zones</strong><p class="small">Areas where faces, text, products and CTAs are less likely to be covered by interface elements.</p></div>
+            <div class="node"><strong>Native execution</strong><p class="small">Creative that feels appropriate to the platform’s normal visual and behavioral language without confusing “native” with careless.</p></div>
+          </div>
+        </details>
+
+        <details>
+          <summary>Glossary</summary>
+          <label for="glossarySearch" class="small" style="display:block;margin-top:14px;font-weight:700">Search terms</label>
+          <input id="glossarySearch" class="glossary-search" type="search" placeholder="Try angle, trigger, mechanism, persona…" />
+          <div id="glossaryGrid" class="glossary-grid"></div>
+        </details>
+      </div>
+    </section>
+
+    <footer>
+      <div><strong>Creative Strategy Resource</strong> · Created by Schuanne Cappel</div>
+      <div>Living resource · Updated as learning and evidence evolve</div>
+    </footer>
+  </main>
+
+<script>
+const glossary={
+'Voice of customer':'Customer language and evidence drawn from reviews, comments, interviews, surveys, sales calls, support interactions and similar sources.',
+'Pain':'The functional, emotional, social or economic problem the person is experiencing now.',
+'Desire':'The state, outcome, identity or relief the person wants instead.',
+'Motivator':'The deeper reason achieving the desired outcome matters to the person.',
+'Persona':'A broader group sharing a relevant pain or desire plus a life context that changes how they experience it.',
+'Micropersona':'The highly specific person inside a persona for whom the creative is being written, often defined by a concrete context, experience or journey moment.',
+'Journey moment':'A concrete event or realization in the customer’s lived progression through the problem, search, decision, use and outcome.',
+'Trigger moment':'The real-life event that precipitates action or purchase. Different from a psychological trigger used in creative.',
+'Psychological trigger':'The cognitive or emotional lever a creative deliberately attempts to activate, such as curiosity, identity recognition, credibility, urgency or pain recognition.',
+'Hook tactic':'The rhetorical frame used in the opening, such as a question, confession, warning, bold claim, contrast or story.',
+'Mechanism':'A cause-and-effect explanation for why the problem happens or why the solution works.',
+'Hidden mechanism':'A causal explanation the customer does not yet recognize or has not connected to the problem.',
+'Mechanism-led':'Messaging that emphasizes why the problem happens or why the solution works rather than stopping at a generic outcome promise.',
+'Positioning':'The strategic place the brand or product intends to occupy in the customer’s mind relative to alternatives.',
+'Angle':'The selected persuasive truth, interpretation or point of view used for a specific customer/problem intersection.',
+'Benefit':'How a customer experiences the value of a feature. A benefit can feed an angle but is not the same thing as an angle.',
+'Objection':'A reason the person may resist buying or acting even though they want the outcome.',
+'Proof':'Evidence that reduces uncertainty or disbelief: demonstration, review, result, credential, statistic, guarantee, case study or similar substantiation.',
+'Urgency':'A reason to act now instead of later, usually involving time, scarcity, consequence or expiring opportunity.',
+'Concept':'The structural creative idea through which the angle is delivered and experienced.',
+'Format':'The execution genre or packaging, such as UGC talking head, demonstration, listicle, static, carousel, founder or podcast clip.',
+'Awareness stage':'What the individual already knows about the problem, available solutions and the product.',
+'Market sophistication':'How much similar messaging, promises and mechanisms the overall market has already encountered.',
+'TOF / MOF / BOF':'A description of where someone sits in the commercial funnel or relationship. It is not a synonym for awareness.',
+'Product category / vertical':'The product market or industry context, such as acne skincare, fashion, supplements, home goods or SaaS.',
+'Price anchoring':'Providing a relevant comparison point that changes how a buyer evaluates the offered price.',
+'Relevance':'The reason a person recognizes that the message applies to them, their situation, identity or problem.',
+'Discovery':'The expectation that continuing will reveal something useful, surprising or previously unknown.',
+'Tagging':'Assigning standardized labels to creative so performance can be analyzed by strategic and execution variables rather than asset name alone.'
+};
+const term=(label)=>`<button type="button" class="term" data-tip="${glossary[label]||''}">${label}</button>`;
+const stages={
+research:`<div class="stage-card"><div><span class="badge">Stage 1</span><h2 style="margin-top:10px">Research — establish what is actually true before inventing creative</h2></div><div class="grid2"><div><h3>Collect ${term('Voice of customer')}</h3><p class="small">Reviews, ad comments, post-purchase surveys, interviews, sales calls, customer-success conversations, support tickets and other sources of actual customer language.</p></div><div><h3>Extract the useful evidence</h3><p class="small">Look for ${term('Pain')}, ${term('Desire')}, failed solutions, ${term('Objection')}, ${term('Trigger moment')}, transformation, proof clues and standout language.</p></div></div><div class="node soft"><strong>Acne throughline</strong><p class="small">Customer reviews repeatedly say: “burning,” “peeling,” “I thought that meant it was working,” “I kept adding stronger products,” and “I just wanted clear skin without destroying my face.” That is evidence. “Customers need confidence” would be an interpretation that still needs support.</p></div><div><h3>Review audit</h3><p class="small">Divide evidence by product → score usefulness/depth → filter low-information entries → extract insights → cluster people and situations → compare customer reality against current creative.</p></div><div class="grid4"><div class="node"><strong>Coverage</strong><p class="small">Who and what dominate customer evidence versus your creative?</p></div><div class="node"><strong>Depth</strong><p class="small">Are ads broad, persona-level or truly micropersona-specific?</p></div><div class="node"><strong>Gaps</strong><p class="small">What pains, desires, objections, moments or language are absent from creative?</p></div><div class="node"><strong>Orphans</strong><p class="small">What creative speaks to people or problems barely represented in available customer evidence?</p></div></div></div>`,
+customer:`<div class="stage-card"><div><span class="badge">Stage 2</span><h2 style="margin-top:10px">Customer Understanding — turn evidence into a specific human context</h2></div><div class="grid2"><div class="node"><strong>${term('Persona')}</strong><p class="small">A broader group sharing a relevant pain/desire and life context.</p><p class="small"><strong>Acne:</strong> adult women whose acne treatments irritate their skin.</p></div><div class="node soft"><strong>${term('Micropersona')}</strong><p class="small">The highly specific person you are writing this particular creative for.</p><p class="small"><strong>Acne:</strong> the professional woman applying concealer over peeling skin before work because her prescription leaves her face irritated.</p></div></div><div class="flow"><div class="node"><strong>${term('Pain')}</strong><p class="small">Treatment burns and peels.</p></div><div class="arrow">→</div><div class="node"><strong>${term('Desire')}</strong><p class="small">Clear, calm skin without damage.</p></div><div class="arrow">→</div><div class="node"><strong>${term('Motivator')}</strong><p class="small">Confidence, comfort and control.</p></div></div><div class="node"><strong>${term('Awareness stage')}</strong><p class="small">Determine what this person knows now. She might be Problem-Aware (“my treatment is irritating me”), Solution-Aware (“gentler acne approaches exist”), Product-Aware, etc. This is the only Awareness Stage concept in the system. Later stages reuse it to change message expression.</p></div><div class="node"><strong>Beliefs + objections</strong><p class="small"><strong>Belief:</strong> “If it burns, it must be working.” <strong>Objection:</strong> “A gentler treatment probably will not clear my acne.” These become raw material for strategy and proof.</p></div></div>`,
+strategy:`<div class="stage-card"><div><span class="badge">Stage 3</span><h2 style="margin-top:10px">Strategy — choose the persuasive truth worth turning into creative</h2></div><div class="grid2"><div><strong>${term('Positioning')}</strong><p class="small">The territory the product wants to own relative to alternatives.</p><p class="small"><strong>Acne:</strong> barrier-first acne care for people exhausted by harsh treatment.</p></div><div><strong>${term('Market sophistication')}</strong><p class="small">Ask what this market has already heard. If “clear skin fast,” ingredient claims and dermatologist language are ubiquitous, generic claims are less distinctive.</p></div></div><div class="grid2"><div><strong>${term('Mechanism')}</strong><p class="small"><strong>Problem mechanism:</strong> aggressive treatment may damage the barrier and perpetuate irritation.</p><p class="small"><strong>Solution mechanism:</strong> the product treats breakouts while supporting the barrier.</p></div><div><strong>${term('Hidden mechanism')} / ${term('Mechanism-led')}</strong><p class="small">The customer may think the acne itself is simply severe. The new causal explanation is that the treatment may be contributing to the irritation cycle. That can create a sharper strategic frame.</p></div></div><div class="node soft"><strong>${term('Angle')}</strong><p class="small">“The treatment meant to clear your acne may be perpetuating the problem by damaging your skin barrier.”</p><p class="small"><strong>Hypothesis:</strong> this interpretation should create stronger recognition + curiosity among customers frustrated by irritation than a generic “clear skin gently” benefit claim.</p></div><p class="small"><strong>Important:</strong> an angle is not the same thing as a ${term('Benefit')}. Benefits, pains, objections, mechanisms and beliefs are inputs from which angles can be derived.</p></div>`,
+journey:`<div class="stage-card"><div><span class="badge">Stage 4</span><h2 style="margin-top:10px">Journey + Opportunity Mapping — speak to the same person at multiple real moments</h2></div><p class="small">A ${term('Micropersona')} is not one ad. Map the ${term('Journey moment')}s that person experiences, then ask which moments, messages and creative expressions are under-covered.</p><div class="journey-line"><div class="journey-item"><span class="badge">Moment 1</span><h3 style="margin-top:8px">First recognition</h3><p class="small">She notices persistent burning and peeling.</p><p class="small muted">Creative opportunity: exact symptom recognition → high ${term('Relevance')}.</p></div><div class="journey-item"><span class="badge">Moment 2</span><h3 style="margin-top:8px">Failed-solution fatigue</h3><p class="small">She keeps adding stronger products because nothing seems to work.</p><p class="small muted">Creative opportunity: reframe the “more aggressive is better” belief.</p></div><div class="journey-item"><span class="badge">Moment 3</span><h3 style="margin-top:8px">Discovery</h3><p class="small">She first encounters the idea of barrier damage.</p><p class="small muted">Creative opportunity: mechanism explanation + ${term('Discovery')}.</p></div><div class="journey-item"><span class="badge">Moment 4</span><h3 style="margin-top:8px">Decision</h3><p class="small">She likes the idea but doubts a gentler approach will be effective.</p><p class="small muted">Creative opportunity: ${term('Proof')} + objection handling.</p></div></div><div class="grid4"><div class="node"><strong>People</strong><p class="small">Which micropersona pockets exist?</p></div><div class="node"><strong>Moments</strong><p class="small">Which lived moments matter?</p></div><div class="node"><strong>Messages</strong><p class="small">Which angles fit those moments?</p></div><div class="node"><strong>Coverage gaps</strong><p class="small">Which combinations are absent from current creative?</p></div></div><p class="small muted">Do not build every theoretical combination. Start with the most evidence-rich and strategically important pockets, then expand based on results.</p></div>`,
+execution:`<div class="stage-card"><div><span class="badge">Stage 5</span><h2 style="margin-top:10px">Execution — decide how the strategy becomes something people actually experience</h2></div><div class="grid4"><div class="node"><strong>${term('Concept')}</strong><p class="small">Hidden-culprit reveal.</p></div><div class="node"><strong>Hook</strong><p class="small">“Your acne treatment may be making your acne worse.”</p></div><div class="node"><strong>${term('Format')}</strong><p class="small">UGC talking head + bathroom demonstration.</p></div><div class="node"><strong>Variant</strong><p class="small">Change one meaningful test variable.</p></div></div><div class="grid2"><div><strong>${term('Hook tactic')}</strong><p class="small">The rhetorical frame. Here: contrarian / bold claim.</p><p class="small"><strong>${term('Psychological trigger')}:</strong> intended response lever. Here: curiosity, belief disruption, pain recognition and stakes.</p></div><div><strong>Hook modes</strong><p class="small">Visual frame + spoken/audio + on-screen text + pacing. These can reinforce one another or deliberately contrast.</p></div></div><div class="node"><strong>${term('Proof')} vs ${term('Urgency')}</strong><p class="small">Proof answers “Why should I believe this?” Urgency answers “Why should I act now?” Proof reduces uncertainty; urgency increases the cost of delay.</p></div><div class="node"><strong>Awareness-stage expression of the same acne angle</strong><div class="grid5" style="margin-top:12px"><div><span class="badge">Unaware</span><p class="small">“If your skin got worse after treatment, this may be why.”</p></div><div><span class="badge">Problem</span><p class="small">“Why does your prescription burn more than your acne?”</p></div><div><span class="badge">Solution</span><p class="small">“Treat acne without stripping your barrier.”</p></div><div><span class="badge">Product</span><p class="small">“Barrier-first care vs the routine that left you peeling.”</p></div><div><span class="badge">Most</span><p class="small">“Try it with a 30-day guarantee.”</p></div></div><p class="small"><strong>These are expressions of one angle, not five separate angles.</strong></p></div></div>`,
+measurement:`<div class="stage-card"><div><span class="badge">Stage 6</span><h2 style="margin-top:10px">Measurement + Learning — diagnose the chain, do not worship one metric</h2></div><div class="grid5"><div class="metric"><span class="small muted">Stop</span><strong>Early retention</strong></div><div class="metric"><span class="small muted">Watch</span><strong>Hold / watch time</strong></div><div class="metric"><span class="small muted">Want</span><strong>Intent / CTR</strong></div><div class="metric"><span class="small muted">Buy</span><strong>CVR / CPA</strong></div><div class="metric"><span class="small muted">Economics</span><strong>ROAS / profit / LTV</strong></div></div><div class="grid2"><div><strong>${term('Tagging')}</strong><p class="small">Record standardized variables: persona, micropersona, journey moment, pain, motivator, awareness, angle, mechanism, concept, hook tactic, psychological trigger, format, creator, platform, placement and result.</p></div><div><strong>Metric definitions</strong><p class="small">Always record what a metric actually counts. “CTR” could mean all clicks, link clicks or outbound clicks. “Hold rate” can be defined differently by different tools.</p></div></div><div class="node soft"><strong>Acne example: interpretation discipline</strong><p class="small">If the mechanism-led video has better early retention than a benefit-led video, you observed a stronger signal. You have not automatically proven that “curiosity caused the lift” or that the micropersona is universally superior. Record the observation, plausible explanation, confounds and next test separately.</p></div><div><strong>Confidence ladder</strong><p class="small">Hypothesis → Signal → Repeated signal → Account pattern → Transferable principle</p></div><p class="small"><strong>Next decision:</strong> keep, iterate, expand or retire. Then ask which earlier stage needs updating: research, customer understanding, strategy, journey coverage or execution.</p></div>`
+};
+const content=document.getElementById('stageContent');
+const buttons=[...document.querySelectorAll('.stage-btn')];
+function showStage(key){content.innerHTML=stages[key];buttons.forEach(b=>b.classList.toggle('active',b.dataset.stage===key));}
+buttons.forEach(b=>b.addEventListener('click',()=>showStage(b.dataset.stage)));
+function renderGlossary(q=''){const s=q.trim().toLowerCase();document.getElementById('glossaryGrid').innerHTML=Object.entries(glossary).filter(([n,d])=>!s||n.toLowerCase().includes(s)||d.toLowerCase().includes(s)).map(([n,d])=>`<div class="node"><strong>${n}</strong><p class="small">${d}</p></div>`).join('')||'<p class="small muted">No matching term.</p>';}
+document.getElementById('glossarySearch').addEventListener('input',e=>renderGlossary(e.target.value));
+renderGlossary();showStage('research');
+</script>
+</body>
+</html>
